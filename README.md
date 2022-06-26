@@ -42,7 +42,7 @@ sudo pip3 install aioconsole hid crc8 websockets
 ***PS:Xbox控制器取得控制权后，一定不要再操作其他的手柄例如joycon，若被抢占，则需重新运行程序***
 
 我的B站教学视频：
-[Bilibili](https://www.bilibili.com/video/BV1x94y117zQ)
+[Bilibili](https://www.bilibili.com/video/BV1t94y117rn/)
 
 ## Thanks
 
