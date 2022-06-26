@@ -18,14 +18,11 @@ sudo pip3 install aioconsole hid crc8 websockets
 ```
 
 - 设置蓝牙
-    - make sure you have a working Bluetooth adapter\
-      If you are running inside a VM, the PC might but not the VM. Check for a controller using `bluetoothctl show`
-      or `bluetoothctl list`. Also a good indicator it the actual os reporting to not have bluetooth anymore.
-    - 关闭 SDP [只有在匹配的时候需要]，将文件`/lib/systemd/system/bluetooth.service`中的对应行替换为以下内容
-      to `ExecStart=/usr/lib/bluetooth/bluetoothd -C -P sap,input,avrcp`
-    - 关闭输入模块 [可选，当配对无法建立时进行]\
-      上述文件中将`ExecStart`一行改为`ExecStart=/usr/lib/bluetooth/bluetoothd -C -P input`
-    - 重启蓝牙服务
+
+将`/lib/systemd/system/bluetooth.service`中的`ExecStart`命令后追加以下内容：
+
+`-C -P sap,input,avrcp`
+- 重启蓝牙服务
   ```bash
     sudo systemctl daemon-reload
     sudo systemctl restart bluetooth.service
@@ -33,13 +30,23 @@ sudo pip3 install aioconsole hid crc8 websockets
 
 ## Usage
 
+1. 输入`ip addr`命令查看树莓派的IP地址
+2. 将`static/controler.html`中的ws地址修改为上述得到的局域网地址
+3. 双击`static/controler.html`，浏览器打开页面后，连接Xbox手柄，测试按键是否正常。若各按键正常，恭喜你，离成功不远啦
+4. 控制joycon手柄，将switch进入配对页面，具体步骤：`手柄 -> 更换手柄顺序`
+5. 运行`sudo python3 run_sockets.py`，刷新浏览器界面，若正常，switch会显示PRO手柄已连接
+6. 保持浏览器界面可见，即可通过XBox手柄控制Switch
 
-```shell
-sudo python3 run_sockets.py
-```
+***PS:步骤4和5的顺序，不可以相反***
+
+***PS:Xbox控制器取得控制权后，一定不要再操作其他的手柄例如joycon，若被抢占，则需重新运行程序***
+
+我的B站教学视频：
+[Bilibili](https://www.bilibili.com/video/BV1x94y117zQ)
 
 ## Thanks
 
 [JoyControl](https://github.com/Poohl/joycontrol)
 
 [Xbox UI](https://codepen.io/simeydotme/pen/rNepONX)
+
