@@ -4,6 +4,12 @@
 
 ![system](./doc/system.png)
 
+# Reqiurement
+
+1. 树莓派，可控制蓝牙的Linux应该亦可
+2. Switch
+3. Xbox one手柄，xbox其他系列手柄应该亦可，但可能需要诸位自己适配按键、摇杆
+
 ## Installation
 
 - 安装依赖
@@ -43,6 +49,27 @@ sudo pip3 install aioconsole hid crc8 websockets
 
 我的B站教学视频：
 [Bilibili](https://www.bilibili.com/video/BV1t94y117rn/)
+
+## Modified files
+与joycontrol源代码相比，我增加了以下内容：
+1. `run_sockets.py` -> websockets服务器，用于向树莓派发送手柄指令
+2. `bin.py` -> 内置的24个塞尔达传说荒野之息的Amiibo文件
+3. `static/*` -> XBOX手柄控制网页
+
+此外，为了实现与Switch第一次的自动连接，对于joycontrol的源代码进行了部分修改，主要在以下内容：
+
+`joycontrol/server.py:52` -> `if reconnect_bt_addr is None or (reconnect_bt_addr == 'auto' and not hid.get_paired_switches()):`
+
+
+## Notes
+
+joycontrol是个伟大的项目，我只是站在巨人的肩膀上，做出了一些小小的改变。
+
+该项目本身是我出自兴趣，随手写下的，代码编写并没有考虑很多异常情况，出现bug也是正常的。
+
+如果有大佬对这感兴趣的，可以根据joycontrol开发出适合自己的内容，我的代码仅供参考
+
+实验性质项目，大概率不会维护。
 
 ## Thanks
 
