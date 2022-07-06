@@ -10,6 +10,10 @@
 2. Switch
 3. Xbox one手柄，xbox其他系列手柄应该亦可，但可能需要诸位自己适配按键、摇杆
 
+**PS: Windows + Linux虚拟机方案最好使用外置的USB蓝牙，板载的蓝牙经测试，无法在虚拟机中使用**
+
+**PS2: 确保Linux的蓝牙模块可以被搜索，可使用`hcitool scan`命令查看**
+
 ## Installation
 
 - 安装依赖
