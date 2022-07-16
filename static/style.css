@@ -1,0 +1,563 @@
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+button {
+    border: 0;
+    outline: none;
+    /*清除默认背景 */
+    background-color: transparent;
+}
+
+a {
+    color: #0064c8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0050a0;
+}
+
+.controller.svelte-1xis06h.svelte-1xis06h {
+    position: relative;
+    width: 100%;
+}
+
+.controller.svelte-1xis06h > .svelte-1xis06h {
+    position: absolute;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.controller.svelte-1xis06h > .svelte-1xis06h:not(.pad):not(.stick):not(.well) {
+    -webkit-animation: svelte-1xis06h-flash 4s ease 1 2s;
+    animation: svelte-1xis06h-flash 4s ease 1 2s;
+}
+
+.pad.svelte-1xis06h.svelte-1xis06h {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/xbox-controller.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.2416%;
+}
+
+.well.svelte-1xis06h.svelte-1xis06h {
+    background: #16bef2;
+    background-image: linear-gradient(25deg, #44494a, #555658 40%, #555658 60%, #44494a);
+    left: 26.5%;
+    top: 14.6%;
+    width: 10.6%;
+    padding-top: 10.2%;
+    border-radius: 100%;
+    box-shadow: inset 0.05vw -0.05vw 0.1vw 0.05vw rgba(0, 0, 0, 0.3), inset -0.05vw 0.05vw 0.05vw 0.05vw rgba(255, 255, 255, 0.3);
+}
+
+.well.right.svelte-1xis06h.svelte-1xis06h {
+    left: auto;
+    right: 35.1%;
+    top: 33.1%;
+}
+
+.well.svelte-1xis06h.svelte-1xis06h::before {
+    content: "";
+    position: absolute;
+    left: 7%;
+    top: 8%;
+    width: 86%;
+    height: 84%;
+    border-radius: 100%;
+    background-color: #16bef2;
+    box-shadow: inset -0.05vw 0.1vw 0.2vw 0.2vw #444547, inset 0vw -0.1vw 0.1vw 0.1vw #18607c, inset 0 0 0 0.2vw #444547, inset 0 0 0.2vw 0.5vw #18607c, inset 0 0 2vw 1vw #18607c;
+    z-index: 0;
+}
+
+.stick.svelte-1xis06h.svelte-1xis06h {
+    position: absolute;
+    left: 11%;
+    top: 2%;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/xbox-controller.jpg");
+    width: 78%;
+    padding-top: 78%;
+    background-position: 30.1% 18.5%;
+    background-size: 1300%;
+    border-radius: 100%;
+    box-shadow: inset 0.5vw -0.5vw 1vw 0.1vw rgba(0, 0, 0, 0.3), -0.5vw 1vw 1vw rgba(0, 0, 0, 0.5), -1.2vw 2vw 2vw rgba(0, 0, 0, 0.6);
+    transition: none;
+    z-index: 3;
+}
+
+.stick.svelte-1xis06h.svelte-1xis06h:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    border-radius: 100%;
+    mix-blend-mode: overlay;
+    box-shadow: inset 0 0 1vw 1vw rgba(255, 255, 255, 0), inset 0 0 0.3vw 0.5vw rgba(97, 229, 255, 0.5), 0 0 0.6vw 0.4vw #5ee0f8, 0 0 1.2vw 0.4vw rgba(94, 224, 248, 0.8);
+    transition: all 0.1s ease;
+    opacity: 0;
+}
+
+.button.on.svelte-1xis06h.svelte-1xis06h,
+.dpad.on.svelte-1xis06h.svelte-1xis06h,
+.bumper.on.svelte-1xis06h.svelte-1xis06h,
+.stick.click.svelte-1xis06h.svelte-1xis06h:after {
+    opacity: 1;
+}
+
+.button.svelte-1xis06h.svelte-1xis06h {
+    width: 4.7%;
+    padding-top: 4.7%;
+    border-radius: 100%;
+    right: 29.3%;
+    top: 28%;
+    background: #5cff00;
+    box-shadow: 0.1vw 0.2vw 0.4vw 0.3vw #5cff00, 0.1vw 0.3vw 2vw 0.5vw #5cff00;
+    mix-blend-mode: overlay;
+    transition: all 0.25s ease;
+    z-index: 2;
+    opacity: 0;
+}
+
+.button.b.svelte-1xis06h.svelte-1xis06h {
+    right: 24.4%;
+    top: 21%;
+    background: #ff0033;
+    box-shadow: 0vw 0vw 0.4vw 0.3vw #ff0033, 0.1vw 0.3vw 2vw 0.5vw #ff0033;
+}
+
+.button.x.svelte-1xis06h.svelte-1xis06h {
+    right: 34.1%;
+    top: 20%;
+    background: #00ebff;
+    box-shadow: 0.1vw 0.2vw 0.4vw 0.3vw #00ebff, 0.1vw 0.3vw 2vw 0.5vw #00ebff;
+}
+
+.button.y.svelte-1xis06h.svelte-1xis06h {
+    right: 29.3%;
+    top: 12%;
+    background: #ffd600;
+    box-shadow: 0vw 0.1vw 0.4vw 0.3vw #ffd600, 0.1vw 0.3vw 2vw 0.5vw #ffd600;
+}
+
+.button.map.svelte-1xis06h.svelte-1xis06h,
+.button.menu.svelte-1xis06h.svelte-1xis06h {
+    left: 43.4%;
+    top: 21.4%;
+    width: 2.9%;
+    padding-top: 2.8%;
+    background: white;
+    box-shadow: inset 0 0 0.5vw 0.2vw #5ee0f8, 0 0.1vw 0.3vw 0.4vw #5ee0f8, 0 0.1vw 1.5vw 0.7vw #5ee0f8, 0 0.1vw 0.2vw 0.1vw #5ee0f8;
+}
+
+.button.menu.svelte-1xis06h.svelte-1xis06h {
+    left: 53.8%;
+}
+
+.button.xbox.svelte-1xis06h.svelte-1xis06h {
+    left: 47.6%;
+    top: 7.7%;
+    width: 4.8%;
+    padding-top: 4.4%;
+    background: #5cff00;
+    mix-blend-mode: screen;
+    box-shadow: inset 0 0 0.1vw 0.1vw white, 0 0.1vw 0.2vw 0.2vw white, 0 0.1vw 0.5vw 0.1vw white, 0 0.1vw 2vw 0.5vw rgba(92, 255, 0, 0.7);
+    transition-duration: 0.5s;
+}
+
+.dpad.svelte-1xis06h.svelte-1xis06h {
+    width: 3.5%;
+    padding-top: 4.8%;
+    border-radius: 20%;
+    left: 38.8%;
+    top: 34.8%;
+    background: linear-gradient(0deg, transparent, #4ed5e0, #33f0ff);
+    box-shadow: 0 -1.4vw 1.7vw 0.2vw #4ed5e0, 0 -2vw 1.4vw 0.2vw rgba(255, 255, 255, 0.1);
+    mix-blend-mode: overlay;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.dpad.dr.svelte-1xis06h.svelte-1xis06h {
+    left: 42%;
+    top: 40%;
+    transform: rotate(90deg);
+}
+
+.dpad.dd.svelte-1xis06h.svelte-1xis06h {
+    top: 46%;
+    transform: rotate(180deg);
+}
+
+.dpad.dl.svelte-1xis06h.svelte-1xis06h {
+    left: 35.6%;
+    top: 40%;
+    transform: rotate(270deg);
+}
+
+.bumper.svelte-1xis06h.svelte-1xis06h {
+    left: 25.5%;
+    top: 3.6%;
+    width: 13%;
+    padding-top: 4%;
+    transform: rotate(-20deg);
+    border-radius: 100%;
+    background: #7edbff;
+    box-shadow: 0vw 0vw 2vw 1vw #7edbff;
+    mix-blend-mode: darken;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.bumper.svelte-1xis06h.svelte-1xis06h:after {
+    content: "";
+    left: 20%;
+    top: 10%;
+    width: 60%;
+    height: 40%;
+    border-radius: 100%;
+    background: cyan;
+    mix-blend-mode: screen;
+    box-shadow: 0vw 0vw 1vw 0.5vw cyan;
+    z-index: 2;
+}
+
+.bumper.right.svelte-1xis06h.svelte-1xis06h {
+    left: auto;
+    right: 25.4%;
+    transform: scaleX(-1) rotate(-22deg);
+}
+
+.trigger.svelte-1xis06h.svelte-1xis06h {
+    left: 15.1%;
+    top: 24%;
+    width: 10%;
+    padding-top: 6px;
+    transform: scaleX(1) scaleY(1) rotate(-69deg);
+    border-radius: 2vw;
+    background: #7edbff;
+    box-shadow: 0vw -1vw 4vw 4vw #7edbff;
+    mix-blend-mode: darken;
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.trigger.right.svelte-1xis06h.svelte-1xis06h {
+    left: auto;
+    right: 15.1%;
+    transform: scaleX(-1) scaleY(1) rotate(-69deg);
+}
+
+@-webkit-keyframes svelte-1xis06h-flash {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+}
+
+@keyframes svelte-1xis06h-flash {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pad {
+    max-height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 2vw 0 10px;
+    font-size: 2.6vw;
+}
+
+p {
+    margin: 10px;
+}
+
+h2 {
+    margin: 1vw;
+    font-size: 2vw;
+}
+
+a {
+    color: #17a1cc;
+}
+
+body {
+    flex-direction: row;
+}
+
+#left {
+    margin-top: 15vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#list {
+    width: 25vw;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+#split {
+    width: 0.15vw;
+    height: 100%;
+    background: #e7e7e7;
+}
+
+.amiibo, #plus {
+    width: 30%;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#plus {
+    min-height: 120px;
+}
+
+#plus::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    border-top: 10px solid;
+}
+
+#plus::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80px;
+    border-left: 10px solid;
+}
+
+.amiibo img {
+    width: 100%;
+}
+
+#list::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+#list::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #535353;
+}
+
+#list::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: #EDEDED;
+}
+
+#toastWaka {
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    padding: 5px 10px;
+    border: 1px #eeeeee solid;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    background: white;
+    box-shadow: 0px 3px 3px #eee;
+    user-select: none;
+    transition: 1s;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#popup {
+    z-index: 999;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+}
+
+#upload_cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transform: translateZ(0);
+    transition: border-color 200ms;
+    cursor: pointer;
+}
+
+#upload_cover > img {
+    height: 100%;
+}
+
+#upload_cover > button {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    padding: 5px;
+    background: #dce4ec;
+    cursor: pointer;
+}
+
+#upload_cover:hover button {
+    opacity: 1;
+}
+
+
+#upload_bin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid #dce4ec;*/
+    color: #34495e;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+#upload_bin > button {
+    background: #dce4ec;
+    padding: 0 10px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#upload_bin #bin_text {
+    height: 40px;
+    flex: 1;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#bin_text::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 1px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 5px;
+}
+
+#bin_text::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #535353;
+}
+
+#bin_text::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+#upload_description {
+    outline: none;
+    border: none;
+    height: 30px;
+    width: calc(100% - 10px);
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#upload_btn {
+    height: 40px;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#mask{
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.active{
+    border: 2px solid #eeeeee;
+}
