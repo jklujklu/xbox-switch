@@ -48,7 +48,7 @@ sudo pip3 install aioconsole hid crc8 websockets nest_asyncio
 2. 将`static/controler.html`中的ws地址修改为上述得到的局域网地址
 3. 双击`static/controler.html`，浏览器打开页面后，连接Xbox手柄，测试按键是否正常。若各按键正常，恭喜你，离成功不远啦
 4. 第一次运行请使用以下命令进行测试配对：`sudo python3 main.py --run test`，若之前已配对过，可跳过本步骤
-5. 运行`sudo python3 main.py`，刷新浏览器界面，若正常，switch会显示PRO手柄已连接
+5. 运行`sudo python3 main.py --run server`，刷新浏览器界面，若正常，switch会显示PRO手柄已连接
 6. 保持浏览器界面可见，即可通过XBox手柄控制Switch
 
 ***若步骤4出现问题，那么很遗憾，你大概率无法连接Switch，请寻找另外的解决方案***
