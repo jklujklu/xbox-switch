@@ -79,6 +79,16 @@ sudo pip3 install aioconsole hid crc8 websockets nest_asyncio
 > 2. 增加本地存储，可自主添加Amiibo
 
 ## Problems
+### 如何添加Amiibo
+
+点击网页中的加号，以此选择Amiibo对应的封面、bin文件，描述可写可不写，点击提交即可实现新增
+
+
+左键点击，第一次为加载，第二次为释放
+
+右键点击为删除
+
+
 ### 如何清除Switch配对记录
 
 1. 终端中输入以下命令:
